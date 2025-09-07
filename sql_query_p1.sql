@@ -11,8 +11,7 @@ CREATE TABLE retail_sales(
 	gender VARCHAR(15),
 	age INT,
 	category VARCHAR(15),
-	quant
-	iy	INT,
+	quantity	INT,
 	price_per_unit FLOAT,
 	cogs FLOAT,
 	total_sale FLOAT
@@ -49,7 +48,7 @@ WHERE
 	 OR
 	 category IS NULL
 	 OR
-	 quantiy IS NULL
+	 quantity IS NULL
 	 OR
 	 cogs IS NULL
 	 OR
@@ -69,7 +68,7 @@ WHERE
 	 OR
 	 category IS NULL
 	 OR
-	 quantiy IS NULL
+	 quantity IS NULL
 	 OR
 	 cogs IS NULL
 	 OR
@@ -104,7 +103,7 @@ WHERE category = 'Clothing'
 	AND 
 	TO_CHAR(sale_date, 'YYYY-MM') = '2022-11'
 	AND
-	quantiy >=4
+	quantity >=4
 
 -- Q.3 Write a SQL query to calculate the total sales (total_sale) and total orders for each category.
 
@@ -194,5 +193,6 @@ SELECT
 	COUNT(*) AS total_orders
 FROM hourly_sale
 GROUP BY shift
+
 
 --End of Project
